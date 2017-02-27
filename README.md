@@ -142,8 +142,10 @@ Get an uuid (Universally Unique IDentifier) for a transaction from transactionId
 * string transactionId
 * string creationDate
 * int sequenceNumber, defaut value : 1
+
 #### Return
 * uuid string
+
 #### Exemple
 ```php
     $uuid = SystempayWebservice::getPaymentUuid($transactionId, $submissionDate);
@@ -155,8 +157,10 @@ findPayments allows to obtain a list of payments according to the search criteri
 At the moment, the paymentToken, subscriptionId and uuid attributes are not taken into account for this operation.
 #### Parameter
 * string orderId
+
 #### Return
 * boolean - true if action successfully completed, false otherwise
+
 #### Exemple
 ```php
     if(SystempayWebservice::findPayments('PHPUnitTest') === true){
@@ -171,8 +175,10 @@ At the moment, the paymentToken, subscriptionId and uuid attributes are not take
 The getPaymentDetails operation allows to request the results for the payment outcome to see its attributes.
 #### Parameter
 * string uuid
+
 #### Return
 * boolean - true if action successfully completed, false otherwise
+
 #### Exemple
 ```php
     if(SystempayWebservice::getPaymentDetails('589f5c2b0b954e3aa802aaa8a22fb17d') === true){
@@ -201,8 +207,10 @@ Note: if no detail is edited, an error code will appear and the query will be re
 * int <optionnal> manualValidation - 0|1
 * string <optionnal> comment
 * int <optionnal> paymentOptionCode
+
 #### Return
 * boolean - true if action successfully completed, false otherwise
+
 #### Exemple
 ```php
     $result = SystempayWebservice::updatePayment($uuid, '2590',date('Y-m-d\TH:m:s\Z', time() + 3600 * 24) ,978,0,'Here is my comment !');
@@ -220,8 +228,10 @@ To be validated, transactions must have one of the following statuses:
 #### Parameters
 * string uuid
 * string <optionnal> comment
+
 #### Return
 * boolean - true if action successfully completed, false otherwise
+
 #### Exemple
 ```php
     if(SystempayWebservice::validatePayment('589f5c2b0b954e3aa802aaa8a22fb17d') === true){
@@ -263,8 +273,10 @@ The transactions subject to refund have the Captured status.
 * int currency
 * int <optionnal> manualValidation - 0|1
 * string <optionnal> comment
+
 #### Return
 * boolean - true if action successfully completed, false otherwise
+
 #### Exemple
 ```php
     SystempayWebservice::refundPayment('0de9251b645e42bda30f1397a9ad6e32', 1500, null, 978, 0, 'Here my refund comment !');
@@ -278,11 +290,14 @@ cancelPayment allows to definitively cancel a not-yet-captured transaction with 
 * To be validated and authorized
 * Waiting for authorization.
 * Waiting for capture.
+
 #### Parameters
 * string uuid
 * string <optionnal> comment
+
 #### Return
 * boolean - true if action successfully completed, false otherwise
+
 #### Exemple
 ```php
     SystempayWebservice::cancelPayment($uuid, 'Here my cancel comment !');

@@ -1,0 +1,31 @@
+{
+  "name": "restoore/systempay-webservice",
+  "description": "The library provides an easy and fast systempay webservice package. Web services are used to include one or several payment functions into an integrated CMS.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["laravel", "Systempay", "webservice"],
+  "authors": [
+    {
+      "name": "Florian Congré",
+      "email": "florian.congre@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "ext-soap": "*",
+    "wsdltophp/packagebase": "~1.0",
+    "phpunit/phpunit": "~5.0",
+    "laravel/framework": "~5.0"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Restoore\\SystempayWebservice\\": "./src/"
+    },
+    "autoload-dev": {
+      "classmap": [
+        "tests/TestCase.php"
+      ]
+    }
+  }
+}

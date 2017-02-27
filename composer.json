@@ -20,12 +20,7 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Restoore\\SystempayWebservice\\": "./src/"
-    },
-    "autoload-dev": {
-      "classmap": [
-        "tests/TestCase.php"
-      ]
+      "Restoore\\SystempayWebservice\\": "src/"
     }
   }
 }

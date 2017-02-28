@@ -30,7 +30,7 @@ After updating composer, add the ServiceProvider to the providers array in confi
 ```php
   'providers' => [
       ...
-      Restoore\Systempay\SystempayWebserviceServiceProvider::class,
+      Restoore\SystempayWebserviceServiceProvider\SystempayWebserviceServiceProvider::class,
   ]
 ```
 
@@ -38,13 +38,13 @@ After updating composer, add the ServiceProvider to the providers array in confi
 ```php
   'providers' => [
       ...
-      Restoore\Systempay\SystempayWebserviceServiceProvider,
+      Restoore\SystempayWebserviceServiceProvider\SystempayWebserviceServiceProvider,
   ]
 ```
 
 #### Facades
 ```php
-'SystempayWebservice' => Restoore\SystempayWebservice\Facades\SystempayWebservice::class
+'SystempayWebservice' => Restoore\SystempayWebserviceServiceProvider\Facades\SystempayWebservice::class
 ```
 
 ## Configuration

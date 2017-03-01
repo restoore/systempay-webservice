@@ -61,7 +61,7 @@ class SystempayWebserviceTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->setSubmissionDate(date('Y-m-d\TH:m:s\Z'));
+        $this->setSubmissionDate(date('Y-m-d\TH:i:s\Z'));
         $this->setOrderId("PHPUnitTest");
     }
 
@@ -201,7 +201,7 @@ class SystempayWebserviceTest extends TestCase
      */
     public function testUpdatePayment($uuid){
         //update transaction and change amount, submission date to d+1 & leave a comment
-        self::assertTrue(SystempayWebservice::updatePayment($uuid, '2590',date('Y-m-d\TH:m:s\Z', time() + 3600 * 24) ,978,0,'Here is my comment !'));
+        self::assertTrue(SystempayWebservice::updatePayment($uuid, '2590',date('Y-m-d\TH:i:s\Z', time() + 3600 * 24) ,978,0,'Here is my comment !'));
         //check if new amount is save
         self::assertEquals(2590,SystempayWebservice::getResult()->paymentResponse->amount);
     }

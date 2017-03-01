@@ -213,7 +213,7 @@ Note: if no detail is edited, an error code will appear and the query will be re
 
 #### Exemple
 ```php
-    $result = SystempayWebservice::updatePayment($uuid, '2590',date('Y-m-d\TH:m:s\Z', time() + 3600 * 24) ,978,0,'Here is my comment !');
+    $result = SystempayWebservice::updatePayment($uuid, '2590',date('Y-m-d\TH:i:s\Z', time() + 3600 * 24) ,978,0,'Here is my comment !');
     if($result === true){
         echo "the new transaction amout is " . SystempayWebservice::getResult()->paymentResponse->amount;
     }

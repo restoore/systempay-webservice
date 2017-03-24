@@ -96,6 +96,12 @@ class SystempayWebservice
     public function setLastError($lastError)
     {
         $this->lastError = $lastError;
+        // exception detected, replace error message by exception message
+        if(is_array($lastError)){
+            foreach ($lastError as $error){
+                $this->lastError = $error->getMessage();
+            }
+        }
         return $this;
     }
 

@@ -1,5 +1,11 @@
 # Use Systempay payment webservice for Laravel 5.x
 
+![Package](https://img.shields.io/badge/Package-restoore%2Fsystempay-webservice-lightgrey.svg)
+![Laravel](https://img.shields.io/badge/For-Laravel%20%E2%89%A5%205.4-yellow.svg)
+![Release](https://img.shields.io/github/release/restoore/systempay-webservice.svg)
+![Packagist](https://img.shields.io/packagist/v/restoore/systempay-webservice.svg)
+![MIT License](https://img.shields.io/github/license/restoore/systempay-webservice.svg)
+
 ## What is the point ?
 The library provides an easy and fast systempay webservice package. 
 Web services are used to include one or several payment functions into an integrated CMS.
@@ -30,7 +36,7 @@ After updating composer, add the ServiceProvider to the providers array in confi
 ```php
   'providers' => [
       ...
-      Restoore\SystempayWebserviceServiceProvider\SystempayWebserviceServiceProvider::class,
+      Restoore\SystempayWebservice\SystempayWebserviceServiceProvider::class,
   ]
 ```
 
@@ -38,13 +44,13 @@ After updating composer, add the ServiceProvider to the providers array in confi
 ```php
   'providers' => [
       ...
-      Restoore\SystempayWebserviceServiceProvider\SystempayWebserviceServiceProvider,
+      Restoore\SystempayWebservice\SystempayWebserviceServiceProvider,
   ]
 ```
 
 #### Facades
 ```php
-'SystempayWebservice' => Restoore\SystempayWebserviceServiceProvider\Facades\SystempayWebservice::class
+'SystempayWebservice' => Restoore\SystempayWebservice\Facades\SystempayWebservice::class
 ```
 
 ## Configuration

@@ -2,7 +2,7 @@
 
 use Restoore\SystempayWebservice\Facades\SystempayWebservice;
 
-class SystempayWebserviceTest extends TestCase
+class SystempayWebserviceTest extends \Tests\TestCase
 {
 
     private $orderId;

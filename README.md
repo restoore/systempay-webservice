@@ -1,6 +1,6 @@
 # Use Systempay payment webservice for Laravel 5.x
 
-![Package](https://img.shields.io/badge/Package-restoore%2Fsystempay-webservice-lightgrey.svg)
+![Package](https://img.shields.io/badge/Package-restoore%2Fsystempay-webservice.svg)![Laravel](https://img.shields.io/badge/For-Laravel%20%E2%89%A5%205.4-yellow.svg)
 ![Laravel](https://img.shields.io/badge/For-Laravel%20%E2%89%A5%205.4-yellow.svg)
 ![Release](https://img.shields.io/github/release/restoore/systempay-webservice.svg)
 ![Packagist](https://img.shields.io/packagist/v/restoore/systempay-webservice.svg)

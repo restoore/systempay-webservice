@@ -22,5 +22,15 @@
     "psr-4": {
       "Restoore\\SystempayWebservice\\": "src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+         "Restoore\\SystempayWebservice\\SystempayWebserviceServiceProvider"
+      ],
+      "aliases": {
+        "SystempayWebservice": "Restoore\\SystempayWebservice\\Facades\\SystempayWebservice"
+      }
+    }
   }
 }
